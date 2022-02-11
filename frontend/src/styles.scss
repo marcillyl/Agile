@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Condensed";
+  src: url();
+  font-weight: 400;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  min-width: 320px;
+}
+body {
+  font-family: "Condensed", Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #fff;
+}
+img {
+  object-fit: cover;
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+button,
+button::before,
+button::after {
+  cursor: pointer;
+  font-family: "Condensed", Arial, Helvetica, sans-serif;
+  border: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+}
+input,
+input::before,
+input::after,
+textarea,
+textarea::before,
+textarea::after {
+  font-family: "Condensed", Arial, Helvetica, sans-serif;
+  border: none;
+  resize: none;
+  color: #fff;
+  font-size: 1em;
+  font-weight: 400;
+}

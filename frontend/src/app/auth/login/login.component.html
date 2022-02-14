@@ -1,0 +1,26 @@
+<h1>Welcome to Agile,</h1>
+<h2>your personal project management tool.</h2>
+<form [formGroup]="loginForm" *ngIf="!loading">
+  <div class="form-group">
+    <label for="email">
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </label>
+  </div>
+  <div class="form-group">
+    <label for="password">
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        formControlName="password"
+      />
+    </label>
+  </div>
+  <button [disabled]="loginForm.invalid" (click)="onLogin()">Connect</button>
+  <p class="text-danger" *ngIf="errorMsg">{{ errorMsg }}</p>
+</form>

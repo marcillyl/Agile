@@ -1,7 +1,7 @@
-<div class="signup">
-  <div class="signup-header">
-    <h1 class="signup-header__headline">Welcome to Agile,</h1>
-    <h2 class="signup-header__text">your personal project management tool.</h2>
+<div class="auth">
+  <div class="auth-header">
+    <h1 class="auth-header__headline">Welcome to Agile,</h1>
+    <h2 class="auth-header__text">your personal project management tool.</h2>
   </div>
   <form [formGroup]="signupForm" *ngIf="!loading" class="form">
     <div class="form-group">
@@ -44,7 +44,9 @@
     <p class="text-danger" *ngIf="errorMsg">{{ errorMsg }}</p>
     <p>
       Already have an account?
-      <a routerLink="/login" routerLinkActive="active">Click here</a>
+      <a routerLink="/login" routerLinkActive="active" class="auth__link"
+        >Click here</a
+      >
     </p>
   </form>
 </div>

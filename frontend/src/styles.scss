@@ -60,3 +60,15 @@ textarea::after {
   font-size: 1em;
   font-weight: 400;
 }
+ul,
+ul::before,
+ul::after,
+li,
+li::before,
+li::after {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+}

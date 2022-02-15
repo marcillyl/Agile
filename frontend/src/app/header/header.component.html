@@ -1,1 +1,58 @@
-<nav></nav>
+<nav class="nav">
+  <div class="nav-left">
+    <ul>
+      <li>
+        <a
+          routerLink="projects"
+          routerLinkActive="active"
+          *ngIf="isAuth"
+          class="nav__link"
+        >
+          Projects
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="profile"
+          routerLinkActive="active"
+          *ngIf="isAuth"
+          class="nav__link"
+        >
+          Profile
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="nav-logo">
+    <div class="nav-logo__image">
+      <h5>Agile</h5>
+    </div>
+  </div>
+  <div class="nav-right">
+    <ul>
+      <li>
+        <a
+          routerLink="signup"
+          routerLinkActive="active"
+          *ngIf="!isAuth"
+          class="nav__link"
+        >
+          Create account
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="login"
+          routerLinkActive="active"
+          *ngIf="!isAuth"
+          class="nav__link"
+        >
+          Connect
+        </a>
+      </li>
+      <li>
+        <a (click)="onLogout()" *ngIf="isAuth"> Disconnect </a>
+      </li>
+    </ul>
+  </div>
+</nav>

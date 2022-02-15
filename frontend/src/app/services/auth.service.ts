@@ -17,4 +17,10 @@ export class AuthService {
   getUserId() {
     return this.userId;
   }
+  logout() {
+    this.authToken = '';
+    this.userId = '';
+    this.isAuth$.next(false);
+    this.router.navigate(['login']);
+  }
 }

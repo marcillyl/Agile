@@ -1,6 +1,9 @@
 <div class="auth">
   <div class="auth-header">
-    <h1 class="auth-header__headline">Welcome to Agile,</h1>
+    <h1 class="auth-header__headline">
+      Welcome to <br />
+      <span class="auth-header__headline--brand">Agile</span>
+    </h1>
     <h2 class="auth-header__text">your personal project management tool.</h2>
   </div>
   <form [formGroup]="signupForm" *ngIf="!loading" class="form">

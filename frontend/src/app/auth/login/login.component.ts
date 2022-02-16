@@ -27,15 +27,15 @@ export class LoginComponent implements OnInit {
     this.loading = true;
     const email = this.loginForm.get('email')?.value;
     const password = this.loginForm.get('password')?.value;
-    this.auth;
-    // .loginUser(email, password)
-    // .then(() => {
-    // this.loading = false;
-    // this.router.navigate(['/projects']);
-    // })
-    // .catch((error: { message: string }) => {
-    // this.loading = false;
-    // this.errorMsg = error.message;
-    // });
+    this.auth
+      .loginUser(email, password)
+      .then(() => {
+        this.loading = false;
+        this.router.navigate(['/projects']);
+      })
+      .catch((error: { message: string }) => {
+        this.loading = false;
+        this.errorMsg = error.message;
+      });
   }
 }

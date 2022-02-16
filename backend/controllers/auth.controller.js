@@ -25,7 +25,7 @@ exports.signup = async (req, res) => {
     res.status(500).send(error);
   }
 };
-exports.signin = async (req, res) => {
+exports.login = async (req, res) => {
   try {
     const user = await User.findOne({ email: req.body.email });
     if (!user) {

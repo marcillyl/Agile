@@ -3,22 +3,22 @@
     <ul>
       <li>
         <a
-          routerLink="projects"
-          routerLinkActive="active"
-          *ngIf="isAuth"
-          class="nav__link"
-        >
-          Projects
-        </a>
-      </li>
-      <li>
-        <a
           routerLink="profile"
           routerLinkActive="active"
           *ngIf="isAuth"
           class="nav__link"
         >
           Profile
+        </a>
+      </li>
+      <li>
+        <a
+          routerLink="projects"
+          routerLinkActive="active"
+          *ngIf="isAuth"
+          class="nav__link"
+        >
+          Projects
         </a>
       </li>
     </ul>
@@ -51,7 +51,13 @@
         </a>
       </li>
       <li>
-        <a (click)="onLogout()" *ngIf="isAuth"> Disconnect </a>
+        <a
+          (click)="onLogout()"
+          *ngIf="isAuth"
+          class="nav__link nav__link--disconnect"
+        >
+          Disconnect
+        </a>
       </li>
     </ul>
   </div>

@@ -19,23 +19,28 @@ export class SignupComponent implements OnInit {
   ) {}
   ngOnInit() {
     this.signupForm = this.formBuilder.group({
+      username: [null, Validators.required],
       email: [null, [Validators.required, Validators.email]],
       password: [null, Validators.required],
     });
   }
   onSignup() {
     this.loading = true;
+    const username = this.signupForm.get('username')?.value;
     const email = this.signupForm.get('email')?.value;
     const password = this.signupForm.get('password')?.value;
-    this.auth;
-    // .loginUser(email, password)
-    // .then(() => {
-    // this.loading = false;
-    // this.router.navigate(['/projects']);
-    // })
-    // .catch((error: { message: string }) => {
-    // this.loading = false;
-    // this.errorMsg = error.message;
-    // });
+    this.auth.createUser(username, email, password).then(() => {
+      this.auth
+        .loginUser(email, password)
+        .then(() => {
+          this.loading = false;
+          this.router.navigate(['/projects']);
+        })
+        .catch((error: { message: string }) => {
+          this.loading = false;
+          console.error(error);
+          this.errorMsg = error.message;
+        });
+    });
   }
 }

@@ -24,5 +24,8 @@
   &__link {
     margin: 0px 12px;
     color: aqua;
+    &--disconnect {
+      color: #fff;
+    }
   }
 }

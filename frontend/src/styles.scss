@@ -35,14 +35,14 @@ $frontend-theme: mat.define-light-theme(
 @include mat.all-component-themes($frontend-theme);
 
 @font-face {
-  font-family: "Condensed";
-  src: url("../assets/fonts/Roboto_Condensed/RobotoCondensed-Light.ttf")
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/static/Montserrat-Light.ttf")
     format("truetype");
   font-weight: 300;
 }
 @font-face {
-  font-family: "Condensed";
-  src: url("../assets/fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf")
+  font-family: "Montserrat";
+  src: url("../assets/fonts/Montserrat/static/Montserrat-Regular.ttf")
     format("truetype");
   font-weight: 400;
 }
@@ -58,7 +58,7 @@ html {
   min-width: 320px;
 }
 body {
-  font-family: "Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   background: #111;
   color: #fff;
 }
@@ -83,7 +83,7 @@ button,
 button::before,
 button::after {
   cursor: pointer;
-  font-family: "Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   border: none;
   background: transparent;
   color: #fff;
@@ -96,7 +96,7 @@ input::after,
 textarea,
 textarea::before,
 textarea::after {
-  font-family: "Condensed", Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
   border: none;
   resize: none;
   color: #fff;

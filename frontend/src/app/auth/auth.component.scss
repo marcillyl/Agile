@@ -6,16 +6,18 @@
   text-align: center;
   &-header {
     margin: 24pt 0px;
-    font-size: 1.3em;
+    font-size: 1.1em;
     &__headline {
-      font-size: 1.5em;
+      font-size: 1.7em;
+      color: #303030;
       &--brand {
         display: inline-block;
         text-transform: uppercase;
-        font-size: 2em;
+        font-size: 2.7em;
         font-weight: 300;
         letter-spacing: 0.3em;
-        margin: 12px 0px;
+        color: #fff;
+        padding-left: 10pt;
       }
     }
   }
@@ -40,7 +42,6 @@
   &-button {
     margin: 12px 0px 24px 0px;
     padding: 10px 24pt;
-    font-size: 1.2em;
     color: #111;
     background: aqua;
   }

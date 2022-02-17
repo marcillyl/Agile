@@ -1,0 +1,26 @@
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &-header {
+    margin: 24pt 0px;
+    font-size: 1.1em;
+    &__headline {
+      font-size: 4.7em;
+      color: #303030;
+    }
+    &__text {
+      margin-top: 10pt;
+    }
+  }
+}
+.project-list {
+  &-button {
+    margin: 12px 0px 24px 0px;
+    padding: 10px 24pt;
+    color: #111;
+    background: aqua;
+  }
+}

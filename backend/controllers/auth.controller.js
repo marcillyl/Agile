@@ -47,7 +47,7 @@ exports.login = async (req, res) => {
         expiresIn: '1h',
       }
     );
-    res.status(200).send({ token: token, id: user._id });
+    res.status(200).send({ token: token, userId: user._id });
   } catch (error) {
     res.status(500).send(error);
   }

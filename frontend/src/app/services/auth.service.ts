@@ -58,4 +58,16 @@ export class AuthService {
         );
     });
   }
+  deleteUser(id: string) {
+    return new Promise((resolve, reject) => {
+      this.http.delete<any>('http://localhost:4000/api/user/' + id).subscribe(
+        (response: { message: string }) => {
+          resolve(response);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
 }

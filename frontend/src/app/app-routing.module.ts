@@ -10,7 +10,7 @@ import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'user/:id', component: ProfileComponent },
+  { path: 'user', component: ProfileComponent },
   { path: 'projects', component: ProjectListComponent },
   { path: 'project/:id', component: SingleProjectComponent },
   { path: 'new-project', component: ProjectFormComponent },

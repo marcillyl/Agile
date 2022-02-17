@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  &-header {
+    margin: 24pt 0px;
+    font-size: 1.1em;
+    &__headline {
+      font-size: 3.7em;
+      color: #303030;
+    }
+    &__text {
+      margin-top: 10pt;
+    }
+  }
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &-group {
+    margin-bottom: 24px;
+  }
+  &-control {
+    padding: 7px;
+    background: #ffffff11;
+    border: solid thin #333;
+  }
+  &-button {
+    margin: 12px 0px;
+    padding: 10px 0px;
+    width: 140pt;
+    color: #111;
+    background: aqua;
+  }
+}

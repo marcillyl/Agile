@@ -1,0 +1,30 @@
+<main class="main">
+  <header class="main-header">
+    <h1 class="main-header__headline">Alright,</h1>
+    <h2 class="main-header__text">let's create a new project</h2>
+  </header>
+  <form class="form">
+    <div class="form-group">
+      <label for="title">
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          formControlName="title"
+        />
+      </label>
+    </div>
+    <div class="form-group">
+      <label for="description">
+        <textarea
+          name="description"
+          class="form-control"
+          id="description"
+          rows="7"
+          formControlName="description"
+        ></textarea>
+      </label>
+    </div>
+    <button class="form-button" (click)="onCreate()">Create</button>
+  </form>
+</main>

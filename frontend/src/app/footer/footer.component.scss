@@ -1,0 +1,14 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f3f3f8;
+  height: 100px;
+  &__text {
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    color: #3c434f;
+  }
+}

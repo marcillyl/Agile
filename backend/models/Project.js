@@ -8,7 +8,7 @@ const projectSchema = mongoose.Schema(
       unique: true,
       trim: true,
     },
-    content: { type: String, required: true, trim: true },
+    description: { type: String, required: true, trim: true },
     status: { type: Boolean, required: true, default: 0 },
   },
   {

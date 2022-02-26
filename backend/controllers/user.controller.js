@@ -1,5 +1,7 @@
 const User = require('../models/User');
-exports.deleteUser = async (req, res) => {
+exports.getOneUser = async (req, res) => {};
+exports.updateOneUser = async (req, res) => {};
+exports.deleteOneUser = async (req, res) => {
   try {
     await User.deleteOne({ _id: req.params.id });
     res.status(200).json({ message: '' });

@@ -1,25 +1,19 @@
 const mongoose = require('mongoose');
-const projectSchema = mongoose.Schema(
+const sprintSchema = mongoose.Schema(
   {
-    createdBy: {
+    belongsTo: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
+      ref: 'Project',
     },
     title: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     description: {
       type: String,
       required: true,
       trim: true,
-    },
-    imageUrl: {
-      type: String,
-      required: true,
-      default: 'http://localhost:4000/assets/images/IMG_0030.jpg',
     },
     isDone: {
       type: Boolean,
@@ -31,4 +25,4 @@ const projectSchema = mongoose.Schema(
     timestamps: true,
   }
 );
-module.exports = mongoose.model('Project', projectSchema);
+module.exports = mongoose.model('Sprint', sprintSchema);

@@ -26,6 +26,11 @@ const projectSchema = mongoose.Schema(
       required: true,
       default: 0,
     },
+    usedBy: {
+      type: Array,
+      required: true,
+      default: [],
+    },
   },
   {
     timestamps: true,

@@ -9,6 +9,7 @@
     font-size: 1.1em;
     &__headline {
       font-size: 4.7em;
+      font-weight: 700;
       color: #2c333f;
     }
     &__text {
@@ -16,11 +17,25 @@
     }
   }
 }
-.project-list {
-  &-button {
-    margin: 12px 0px 24px 0px;
-    padding: 10px 24pt;
-    color: #0c131f;
-    background: aqua;
+.project {
+  cursor: pointer;
+  min-width: 200px;
+  margin: 12px;
+  padding: 12px;
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    &-button {
+      margin: 24px 0px;
+      padding: 10px 24pt;
+      color: #0c131f;
+      background: aqua;
+    }
+  }
+  &__headline {
+    margin: 12px 0px;
+    font-size: 1.4em;
   }
 }

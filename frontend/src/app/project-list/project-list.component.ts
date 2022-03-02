@@ -36,7 +36,6 @@ export class ProjectListComponent implements OnInit {
       }
     );
     this.project.getProjects(this.userId);
-    console.log(this.projects);
   }
   onClickProject(id: string) {
     this.router.navigate(['/project/', id]);

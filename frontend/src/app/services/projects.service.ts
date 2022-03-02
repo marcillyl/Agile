@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { AuthService } from './auth.service';
 import { Project } from '../models/Project.model';
 
 @Injectable({

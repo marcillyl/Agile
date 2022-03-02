@@ -3,7 +3,7 @@
     <h1 class="main-header__headline">Alright,</h1>
     <h2 class="main-header__text">let's create a new project</h2>
   </header>
-  <form class="form">
+  <form [formGroup]="projectForm" *ngIf="!loading" class="form">
     <div class="form-group">
       <label for="title">
         <input
@@ -25,6 +25,12 @@
         ></textarea>
       </label>
     </div>
-    <!-- <button class="form-button" (click)="onCreate()">Create</button> -->
+    <button
+      [disabled]="projectForm.invalid"
+      (click)="onCreate()"
+      class="form-button"
+    >
+      Create
+    </button>
   </form>
 </main>

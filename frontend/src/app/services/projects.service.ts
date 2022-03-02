@@ -8,14 +8,11 @@ import { Project } from '../models/Project.model';
   providedIn: 'root',
 })
 export class ProjectsService {
-  projects$ = new Subject<Project[]>();
-  constructor(private http: HttpClient, private auth: AuthService) {}
+  constructor(private http: HttpClient) {}
   createProject(project: Project) {
     return new Promise((resolve, reject) => {
-      const formData = new FormData();
-      formData.append('project', JSON.stringify(project));
       this.http
-        .post<any>('http://localhost:4000/api/projects', formData)
+        .post<any>('http://localhost:4000/api/project/', project)
         .subscribe(
           (response: { message: string }) => {
             resolve(response);

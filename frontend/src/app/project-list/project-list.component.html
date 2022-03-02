@@ -5,7 +5,18 @@
       here you'll find an overview of your projects
     </h2>
   </header>
-  <section class="project-list"></section>
+  <p *ngIf="!loading && projects.length == 0">No project found.</p>
+  <section *ngIf="!loading && projects.length > 0" class="project-list">
+    <article
+      *ngFor="let project of projects"
+      (click)="onClickProject(project._id)"
+      class="project"
+    >
+      <img [src]="project.imageUrl" class="project-image" />
+      <h3 class="project-headline">{{ project.title }}</h3>
+      <p class="project-text">{{ project.description }}</p>
+    </article>
+  </section>
   <a
     routerLink="/new-project"
     routerLinkActive="active"

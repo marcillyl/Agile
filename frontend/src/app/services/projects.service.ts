@@ -8,6 +8,7 @@ import { Project } from '../models/Project.model';
   providedIn: 'root',
 })
 export class ProjectsService {
+  projects$ = new Subject<Project[]>();
   constructor(private http: HttpClient) {}
   createProject(project: Project) {
     return new Promise((resolve, reject) => {
@@ -22,5 +23,16 @@ export class ProjectsService {
           }
         );
     });
+  }
+  getProjects(id: string) {
+    this.http.get<any>('http://localhost:4000/api/project/all/' + id).subscribe(
+      (projects: Project[]) => {
+        this.projects$.next(projects);
+      },
+      (error) => {
+        this.projects$.next([]);
+        console.error(error);
+      }
+    );
   }
 }

@@ -8,7 +8,7 @@
   width: 100%;
   height: 70px;
   padding: 0px 12px;
-  background: #1c232f;
+  background: #171717;
   &-left {
     display: flex;
     justify-content: flex-start;
@@ -19,6 +19,7 @@
     &__text {
       text-transform: uppercase;
       letter-spacing: 0.4em;
+      font-size: 1.1em;
     }
   }
   &-right {
@@ -26,8 +27,15 @@
     justify-content: flex-end;
   }
   &__link {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 12px;
     margin: 0px 12px;
-    font-size: 11pt;
+    opacity: 0.4;
+    transition: opacity 100ms ease-in-out;
+    &:hover {
+      opacity: 1;
+    }
     &--disconnect {
       color: #fff;
     }

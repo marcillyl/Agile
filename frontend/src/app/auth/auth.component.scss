@@ -9,7 +9,7 @@
     font-size: 1.1em;
     &__headline {
       font-size: 1.7em;
-      color: #2c333f;
+      color: #333;
       &--brand {
         display: inline-block;
         text-transform: uppercase;
@@ -35,14 +35,15 @@
     margin-bottom: 24px;
   }
   &-control {
+    min-width: 140pt;
     padding: 7px;
     background: #ffffff11;
-    border: solid thin #3c434f;
+    border: solid thin #333;
   }
   &-button {
     margin: 12px 0px 24px 0px;
     padding: 10px 24pt;
-    color: #0c131f;
+    color: #111;
     background: aqua;
   }
 }

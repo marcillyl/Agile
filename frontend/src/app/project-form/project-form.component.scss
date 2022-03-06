@@ -9,7 +9,8 @@
     font-size: 1.1em;
     &__headline {
       font-size: 3.7em;
-      color: #2c333f;
+      font-weight: 300;
+      color: #333;
     }
     &__text {
       margin-top: 10pt;
@@ -25,15 +26,16 @@
     margin-bottom: 24px;
   }
   &-control {
+    min-width: 170pt;
     padding: 7px;
     background: #ffffff11;
-    border: solid thin #3c434f;
+    border: solid thin #333;
   }
   &-button {
     margin: 12px 0px;
     padding: 10px 0px;
     width: 140pt;
-    color: #0c131f;
+    color: #111;
     background: aqua;
   }
 }

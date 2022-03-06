@@ -9,8 +9,8 @@
     font-size: 1.1em;
     &__headline {
       font-size: 4.7em;
-      font-weight: 700;
-      color: #2c333f;
+      font-weight: 300;
+      color: #333;
     }
     &__text {
       margin-top: 10pt;
@@ -18,8 +18,11 @@
   }
 }
 .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   cursor: pointer;
-  min-width: 200px;
+  width: 170pt;
   margin: 12px;
   padding: 12px;
   &-list {
@@ -30,12 +33,18 @@
     &-button {
       margin: 24px 0px;
       padding: 10px 24pt;
-      color: #0c131f;
+      color: #111;
       background: aqua;
     }
   }
   &__headline {
     margin: 12px 0px;
-    font-size: 1.4em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: aqua;
+  }
+  &__image {
+    max-width: 140pt;
+    height: 100px;
   }
 }

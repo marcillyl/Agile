@@ -22,9 +22,16 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  width: 170pt;
-  margin: 12px;
-  padding: 12px;
+  max-width: 170pt;
+  margin: 12pt;
+  padding: 12pt;
+  background-color: #222;
+  border: solid thin #333;
+  transition: background-color 140ms ease-in-out, border-color 140ms ease-in-out;
+  &:hover {
+    background-color: #333;
+    border-color: #444;
+  }
   &-list {
     display: flex;
     flex-wrap: wrap;
@@ -39,12 +46,10 @@
   }
   &__headline {
     margin: 12px 0px;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: aqua;
   }
   &__image {
     max-width: 140pt;
     height: 100px;
+    border: solid thin #fff;
   }
 }

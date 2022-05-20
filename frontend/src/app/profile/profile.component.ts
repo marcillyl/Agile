@@ -9,9 +9,13 @@ import { AuthService } from '../services/auth.service';
 export class ProfileComponent implements OnInit {
   loading!: boolean;
   userId!: string;
+  user!: any;
   constructor(private auth: AuthService) {}
   ngOnInit(): void {
     this.userId = this.auth.getUserId();
+    this.auth
+      .getOneUser(this.userId)
+      .then((response) => (this.user = response));
   }
   onLogout() {
     this.auth.logout();

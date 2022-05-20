@@ -3,6 +3,10 @@
     <h1 class="main-header__headline">Your profile</h1>
     <h2 class="main-header__text">manage your account from this page</h2>
   </header>
+  <section>
+    <h3>Username : {{ user.username }}</h3>
+    <h3>Email : {{ user.email }}</h3>
+  </section>
   <section class="options">
     <button class="options-button" (click)="onLogout()">Disconnect</button>
     <button class="options-button options-button--delete" (click)="onDelete()">

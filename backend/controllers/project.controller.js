@@ -21,6 +21,10 @@ exports.getAllProjects = async (req, res) => {
     res.status(500).send(error);
   }
 };
-exports.getOneProject = async (req, res) => {};
+exports.getOneProject = async (req, res) => {
+  Project.findOne({ _id: req.params.id })
+    .then((project) => res.status(200).json(project))
+    .catch((error) => res.status(404).json(error));
+};
 exports.updateOneProject = async (req, res) => {};
 exports.deleteOneProject = async (req, res) => {};

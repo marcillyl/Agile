@@ -70,4 +70,16 @@ export class AuthService {
       );
     });
   }
+  getOneUser(id: string) {
+    return new Promise((resolve, reject) => {
+      this.http.get<any>('http://localhost:4000/api/user/' + id).subscribe(
+        (response: { message: string }) => {
+          resolve(response);
+        },
+        (error) => {
+          reject(error);
+        }
+      );
+    });
+  }
 }

@@ -1,0 +1,37 @@
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__headline {
+    font-size: 1.4em;
+    color: aqua;
+    margin: 12px;
+  }
+  &__title {
+    font-size: 1.7em;
+  }
+  &__image {
+    background-color: #222;
+    border: solid thin #333;
+    max-width: 140pt;
+    height: 100px;
+    padding: 12px;
+  }
+  &__description {
+    max-width: 400px;
+    text-align: center;
+    line-height: 1.7em;
+  }
+  &-button {
+    margin: 24px 0px;
+    padding: 10px 0px;
+    width: 140pt;
+    color: #111;
+    background: aqua;
+    &--delete {
+      color: #fff;
+      background: crimson;
+    }
+  }
+}

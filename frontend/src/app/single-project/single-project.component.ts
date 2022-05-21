@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Project } from '../models/Project.model';
 import { AuthService } from '../services/auth.service';
 import { ProjectsService } from '../services/projects.service';
 
@@ -16,6 +15,7 @@ export class SingleProjectComponent {
   constructor(
     private projects: ProjectsService,
     private route: ActivatedRoute,
+    private router: Router,
     private auth: AuthService
   ) {}
   ngOnInit() {
@@ -26,6 +26,14 @@ export class SingleProjectComponent {
         this.project = response;
         this.loading = false;
       });
+    });
+  }
+  onDelete() {
+    this.loading = true;
+    this.route.params.subscribe((params) => {
+      this.projects.deleteProject(params['id']);
+      this.loading = false;
+      this.router.navigate(['projects']);
     });
   }
 }

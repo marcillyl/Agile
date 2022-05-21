@@ -46,4 +46,18 @@ export class ProjectsService {
       );
     });
   }
+  deleteProject(id: string) {
+    return new Promise((resolve, reject) => {
+      this.http
+        .delete<any>('http://localhost:4000/api/project/' + id)
+        .subscribe(
+          (project: Project) => {
+            resolve(project);
+          },
+          (error) => {
+            reject(error);
+          }
+        );
+    });
+  }
 }

@@ -11,7 +11,6 @@ exports.addProject = async (req, res) => {
 exports.getAllProjects = async (req, res) => {
   try {
     const projects = await Project.find({ createdBy: req.params.id });
-    console.log(projects);
     if (!projects) {
       res.status(404).json({ message: 'Not found!' });
       return;
@@ -27,4 +26,8 @@ exports.getOneProject = async (req, res) => {
     .catch((error) => res.status(404).json(error));
 };
 exports.updateOneProject = async (req, res) => {};
-exports.deleteOneProject = async (req, res) => {};
+exports.deleteOneProject = async (req, res) => {
+  Project.deleteOne({ _id: req.params.id })
+    .then(() => res.status(200))
+    .catch((error) => res.status(400).json({ error }));
+};

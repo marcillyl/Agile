@@ -1,5 +1,5 @@
 <main class="main">
-  <section class="project">
+  <section class="project" *ngIf="project">
     <img [src]="project.imageUrl" class="project__image" />
     <h1 class="project__headline">_title :</h1>
     <p class="project__title">{{ project.title }}</p>
@@ -9,4 +9,5 @@
       Delete project
     </button>
   </section>
+  <p *ngIf="!project">No project found</p>
 </main>

@@ -32,8 +32,8 @@ export class SingleProjectComponent {
     this.loading = true;
     this.route.params.subscribe((params) => {
       this.projects.deleteProject(params['id']);
+      this.project = null;
       this.loading = false;
-      this.router.navigate(['projects']);
     });
   }
 }
